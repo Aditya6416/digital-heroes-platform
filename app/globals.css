@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0d14;
+  --foreground: #f8fafc;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d121c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #243147;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #364966;
+}
+
+/* Glassmorphic card utility */
+.glass-panel {
+  background: rgba(17, 23, 34, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(38, 52, 75, 0.8);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel-hover:hover {
+  background: rgba(24, 33, 48, 0.85);
+  border-color: rgba(52, 211, 153, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px -3px rgba(16, 185, 129, 0.1);
+}
+
+/* Glowing ball badges for draw numbers */
+.draw-ball {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, #34d399, #059669);
+  color: #042f2e;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.draw-ball-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, #fbbf24, #d97706);
+  color: #451a03;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.draw-ball-dimmed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  border-radius: 9999px;
+  background: #182130;
+  border: 1px solid #26344b;
+  color: #94a3b8;
+}
